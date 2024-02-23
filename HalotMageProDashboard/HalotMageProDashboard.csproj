@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net8.0-windows10.0.20348.0</TargetFramework>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UseWPF>true</UseWPF>
+		<SupportedOSPlatformVersion>10.0.20348.0</SupportedOSPlatformVersion>
+		<EnableDefaultApplicationDefinition>false</EnableDefaultApplicationDefinition>
+		<PublishSingleFile>true</PublishSingleFile>
+		<Platforms>x64</Platforms>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="ArpLookup" Version="2.0.3" />
+		<PackageReference Include="HalotMageProSharp" Version="1.0.0" />
+		<PackageReference Include="IPNetwork2" Version="3.0.648" />
+		<PackageReference Include="LivetCask" Version="4.0.2" />
+		<PackageReference Include="MetroRadiance.Core" Version="2.4.0" NoWarn="NU1701" />
+		<PackageReference Include="MetroRadiance.Chrome" Version="2.2.0" NoWarn="NU1701" />
+		<PackageReference Include="MetroRadiance" Version="2.4.0" NoWarn="NU1701" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.1" />
+		<PackageReference Include="Microsoft.Extensions.Http" Version="8.0.0" />
+		<PackageReference Include="Wpf.Extensions.Hosting" Version="1.2.0" />
+	</ItemGroup>
+
+</Project>

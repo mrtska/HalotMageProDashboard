@@ -1,0 +1,24 @@
+name: .NET format
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+
+jobs:
+  fixer:
+    runs-on: windows-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 8.0.x
+      - name: Verify formatting
+        run: |
+          echo "::add-matcher::.github/workflows/dotnet-format-matcher.json"
+          dotnet build ./HalotMageProDashboard.sln
+          dotnet format ./HalotMageProDashboard.sln --verify-no-changes
